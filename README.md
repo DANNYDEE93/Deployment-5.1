@@ -34,7 +34,7 @@ __________________________________________________________________________
 
 **1 Internet Gateway* 
 
-**1 Security Group (with ports: 22 for SSHing, 8080 for Jenkins main server, and 8000 for )*
+**1 Security Group (with ports: 22 for SSHing, 8080 for Jenkins main server, and 8000 for Gunicorn production web server)*
 
 _____________________________________________________________________
 
@@ -66,7 +66,7 @@ __________________________________________________________
 
 * [Instructions on how to create agent nodes in Jenkins.](https://scribehow.com/shared/Step-by-step_Guide_Creating_an_Agent_in_Jenkins__xeyUT01pSAiWXC3qN42q5w) *See the importance of the agent nodes explained further below.*
 
-![system_diagram]()
+![system_diagram](static/images/D5.1nodes.png)
 
 ____________________________________________________________________________
 ### Step 5: Gunicorn Production Environment on Web Application Server
