@@ -98,18 +98,18 @@ _______________________________________________________________________________
 
 <ins> ***Reminder stage:** </ins> Confirmation to the developer that the application is running on deployed on  web server*
 
- ![system_diagram]()
+ ![system_diagram](static/images/d5.1jenkins.png)
 
 * Copy and paste the public IP address of the agent servers and port 8000 **<ip_address:8000>** to run the deployment in a new browser. Again, this is established through the installations and dependencies that are connected to the agent nodes on each agent server.
 
-![system_diagram]()
+![system_diagram](static/images/D5.1deploy.jpg)
+
 ___________________________________________
 
 ### <ins>SYSTEM DIAGRAM:</ins>
 _________________________________________________
 
-
-![system_diagram]()
+![system_diagram](static/images/D5.1sd.jpg)
 
 _________________________________________________
 
