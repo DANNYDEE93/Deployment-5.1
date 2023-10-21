@@ -42,13 +42,13 @@ _____________________________________________________________________
 
 <ins>Terraform steps to create infratructure </ins>
 
-**Terraform init:** to initialize terraform and the backend configurations
+* **Terraform init:** to initialize terraform and the backend configurations
 
-**Terraform validate:** to validate that the terraform file is configured properly
+* **Terraform validate:** to validate that the terraform file is configured properly
 
-**Terraform plan:** to show exactly what will be created when applied
+* **Terraform plan:** to show exactly what will be created when applied
 
-**Terraform apply:** to execute infrastructure script
+* **Terraform apply:** to execute infrastructure script
 
 ______________________________________________________________________________
 ### Step 2: Git commits & Repo Changes 
@@ -90,13 +90,13 @@ _______________________________________________________________________________
 
 <ins> ***Deploy stage**: </ins> Activates python -venv, installs Gunicorn, runs the [database.py](https://github.com/DANNYDEE93/Deployment-5.1/blob/main/database.py) script to import required SQLAlchemy libraries to store data in a **database.db** SQLite file, and initializes the Flask web application through Gunicorn in daemon mode*
 
-&emsp;&emsp;&emsp;&emsp; *Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks &e separately and simultaneously.
+* Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks &e separately and simultaneously.
     
-&emsp;&emsp;&emsp;&emsp; *Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the application when necessary. 
+* Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the application when necessary. 
        
-&emsp;&emsp;&emsp;&emsp; *The main server's resources are balanced because Gunicorn can independently run its processes to handle more requests at a time. 
+* The main server's resources are balanced because Gunicorn can independently run its processes to handle more requests at a time. 
 	
-&emsp;&emsp;&emsp;&emsp; *Gunicorn is configured to output log files and metrics in JUnit format. 
+* Gunicorn is configured to output log files and metrics in JUnit format. 
 
 <ins> ***Reminder stage:** </ins> Confirmation to the developer that the application is running on deployed on  web server*
 
