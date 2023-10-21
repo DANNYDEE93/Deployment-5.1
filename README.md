@@ -138,7 +138,7 @@ _____________________________________________
 
 <ins>4. Using a containerized Jenkins agent:</ins> 
 
- * Simplified management: Containerized and cloud-based Jenkins agents are easier to manage than traditional Jenkins agents because you do not need to install and maintain Jenkins on each machine.
+ * Simplified management: Containerized and cloud-based Jenkins agents are easier to manage than traditional Jenkins agents because you do not need to install and maintain Jenkins on each machine. The dependencies come installed within each container. This can be achieved through a regular operating system but can be done quicker and safer through the Docker runtime engine. 
 
  * Increased scalability: Easier to add or remove Jenkins agents as needed, reducing resource contention.
 
