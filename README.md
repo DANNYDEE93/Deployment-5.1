@@ -90,11 +90,11 @@ _______________________________________________________________________________
 
 <ins> ***Deploy stage**: </ins> Activates python -venv, installs Gunicorn, runs the [database.py](https://github.com/DANNYDEE93/Deployment-5.1/blob/main/database.py) script to import required SQLAlchemy libraries to store data in a **database.db** SQLite file, and initializes the Flask web application through Gunicorn in daemon mode*
 
-&emsp;&emsp;&emsp;&emsp; *Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks &emsp;&emsp;&emsp;&emsp; separately and simultaneously.
+&emsp;&emsp;&emsp;&emsp; *Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks &e separately and simultaneously.
     
-&emsp;&emsp;&emsp;&emsp; *Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the &emsp;&emsp;&emsp;&emsp; application when necessary. 
+&emsp;&emsp;&emsp;&emsp; *Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the application when necessary. 
        
-&emsp;&emsp;&emsp;&emsp; *The main server's resources are balanced because Gunicorn can independently run its processes to handle more requests &emsp;&emsp;&emsp;&emsp; at a time. 
+&emsp;&emsp;&emsp;&emsp; *The main server's resources are balanced because Gunicorn can independently run its processes to handle more requests at a time. 
 	
 &emsp;&emsp;&emsp;&emsp; *Gunicorn is configured to output log files and metrics in JUnit format. 
 
@@ -128,9 +128,9 @@ _____________________________________________
 
 &emsp;&emsp;&emsp;&emsp; * Implementing Terraform modules(reusable infrastructure definitions to reduce error and increase efficiency). 
 
-&emsp;&emsp;&emsp;&emsp; * Including private subnet for the application/ Jenkins server to increase security and availability by protecting my Jenkins application server from unauthorized &emsp;&emsp;&emsp;&emsp; access.
+&emsp;&emsp;&emsp;&emsp; * Including private subnet for the application/ Jenkins server to increase security and availability by protecting my Jenkins application server from unauthorized access.
 
-&emsp;&emsp;&emsp;&emsp; * Including "aws_autoscaling_policy" resource to scale up or down as needed (ex. when resources like CPU reach a certain utilization), detect unhealthy instances and &emsp;&emsp;&emsp;&emsp; replace them, and automate recovery by redeploying failed instances.
+&emsp;&emsp;&emsp;&emsp; * Including "aws_autoscaling_policy" resource to scale up or down as needed (ex. when resources like CPU reach a certain utilization), detect unhealthy instances and replace them, and automate recovery by redeploying failed instances.
 
 *<ins>Error handling:</ins> Create webhook to automatically trigger Jenkins build when there are changes to my GitHub repository to detect if any changes disrupt or optimize my deployment, reduce the risk of latency, and fix bugs for faster deployments. 
 
