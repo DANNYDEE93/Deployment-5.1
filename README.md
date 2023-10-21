@@ -10,7 +10,9 @@ ___________________
 ### <ins>ISSUES:</ins>
 __________________________________
 *GitHub: Merged my branches before pushing making only a main branch. I needed to create a second branch to run the build through the agent node on the third server because the main branch was running on the second instance through the IP address already. 
+
 *Jenkinsfile: The second node wasn't working until I changed the agent node name in the Jenkinsfile in the second branch I needed to change the agent name to "awsDeploy2" and needed to change the hostname to the third instance's IP address.
+
 *Deployment Process: After a successful test in Jenkins, my server was still unable to serve up the web application. I needed to run my Jenkins build multiple times, and upgrade my agent server, and then the application worked.
 ________________________________________________________________________________
 
