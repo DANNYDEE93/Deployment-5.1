@@ -88,10 +88,13 @@ _______________________________________________________________________________
 
 <ins> ***Deploy stage**: </ins> Activates python -venv, installs Gunicorn, runs the [database.py]() script to import required SQLAlchemy libraries to store data in a **database.db** SQLite file, and initializes the Flask web application through Gunicorn in daemon mode*
 
-   		*Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks separately and simultaneously.
-     		*Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the application when necessary. 
-       		*The main server's resources are balanced because Gunicorn can independently run its processes to handle more requests at a time. 
-	 	*Gunicorn is configured to output log files and metrics in JUnit format. 
+   	*Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks separately and 		simultaneously.
+    
+     	*Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the application when 		necessary. 
+      
+       	*The main server's resources are balanced because Gunicorn can independently run its processes to handle more requests at a time. 
+	
+	 *Gunicorn is configured to output log files and metrics in JUnit format. 
 
 <ins> ***Reminder stage:** </ins> Confirmation to the developer that the application is running on deployed on  web server*
 
@@ -120,16 +123,23 @@ _____________________________________________
 <ins> **Other ways to optimize and increase user availability of my deployment:** </ins>
 
 *<ins>Enhancing the automation of the AWS Cloud Infrastructure:</ins> 
+
 &emsp;&emsp;&emsp;&emsp; * Implementing Terraform modules(reusable infrastructure definitions to reduce error and increase efficiency). 
+
 &emsp;&emsp;&emsp;&emsp; * Including private subnet for the application/ Jenkins server to increase security and availability by protecting my Jenkins application server from unauthorized access.
+
 &emsp;&emsp;&emsp;&emsp; * Including "aws_autoscaling_policy" resource to scale up or down as needed (ex. when resources like CPU reach a certain utilization), detect unhealthy instances and replace them, and automate recovery by redeploying failed instances.
 
 *<ins>Error handling:</ins> Create webhook to automatically trigger Jenkins build when there are changes to my GitHub repository to detect if any changes disrupt or optimize my deployment, reduce the risk of latency, and fix bugs for faster deployments. 
 
 *<ins>Using a cloud-based Jenkins agent:</ins> In this deployment, my Jenkins agent nodes are running with the AWS cloud. While using multiple cloud providers can be more complex and costly, it comes with greater flexibility so you don't have to be locked in with one vendor or provider, and improved reliability and performance as different providers come with different advantages and resources.
 
-*<ins>Using a containerized Jenkins agent</ins> 
-&emsp;&emsp;&emsp;&emsp; * Simplified management: Containerized and cloud-based Jenkins agents are easier to manage than traditional Jenkins agents because you do not need to install and 				   maintain Jenkins on each machine.
+*<ins>Using a containerized Jenkins agent:</ins> 
+
+&emsp;&emsp;&emsp;&emsp; * Simplified management: Containerized and cloud-based Jenkins agents are easier to manage than traditional Jenkins agents because you do not need to install and maintain Jenkins on each machine.
+
 &emsp;&emsp;&emsp;&emsp; * Increased scalability: Easier to add or remove Jenkins agents as needed, reducing resource contention.
-&emsp;&emsp;&emsp;&emsp; * Reduced costs because you can run multiple Jenkins agents on the same machine or in the cloud, reducing the need for multiple virtual machines/ec2 instances 
+
+&emsp;&emsp;&emsp;&emsp; * Reduced costs because you can run multiple Jenkins agents on the same machine or in the cloud, reducing the need for multiple virtual machines/ec2 instances.
+
 &emsp;&emsp;&emsp;&emsp; * Reduced complexities with configurations.
