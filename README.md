@@ -1,4 +1,4 @@
-## <ins>Deployment 5: Retail Banking Flask Application on Gunicorn Production Environment through Jenkins and Terraform</ins>
+## <ins>Deployment 5.1: Retail Banking Flask Application on Gunicorn Production Environment through Jenkins and Terraform</ins>
 _________________________________________________
 ##### Danielle Davis
 ##### October 21, 2023
