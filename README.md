@@ -111,7 +111,7 @@ ___________________________________________
 ### <ins>SYSTEM DIAGRAM:</ins>
 _________________________________________________
 
-![system_diagram](static/images/D5.1sd.jpg)
+![system_diagram](static/images/updated5.1sd.jpg)
 
 _________________________________________________
 
