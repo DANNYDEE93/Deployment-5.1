@@ -39,7 +39,7 @@ fi
 }
 }
 stage ('Deploy') {
-agent {label 'awsDeploy || awsDeploy2'}
+agent {label 'awsDeploy2'}
 steps {
 keepRunning {
 sh '''#!/bin/bash
