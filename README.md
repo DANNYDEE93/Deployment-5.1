@@ -90,7 +90,7 @@ _______________________________________________________________________________
 
 <ins> ***Deploy stage**: </ins> Activates python -venv, installs Gunicorn, runs the [database.py](https://github.com/DANNYDEE93/Deployment-5.1/blob/main/database.py) script to import required SQLAlchemy libraries to store data in a **database.db** SQLite file, and initializes the Flask web application through Gunicorn in daemon mode*
 
-* Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks &e separately and simultaneously.
+* Since Gunicorn is running as a background process, the agent servers have more capacity to handle multiple tasks separately and simultaneously.
     
 * Decreases latency because even if the SSH session is closed, the web app can continuously run, restart, or stop the application when necessary. 
        
